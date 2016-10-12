@@ -14,9 +14,7 @@ import org.wit.myrent.R;
 import org.wit.myrent.app.MyRentApp;
 import org.wit.myrent.models.Residence;
 
-/**
- * Created by jfitzgerald on 12/10/2016.
- */
+
 public class ResidenceMapFragment extends MapFragment implements OnMapReadyCallback,
     GoogleMap.OnMarkerDragListener,
     GoogleMap.OnInfoWindowClickListener,
@@ -37,6 +35,10 @@ public class ResidenceMapFragment extends MapFragment implements OnMapReadyCallb
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
+    resId = (Long)getActivity().getIntent().getSerializableExtra(ResidenceFragment.EXTRA_RESIDENCE_ID);
+    app = (MyRentApp)getActivity().getApplication();
+    residence = app.portfolio.getResidence(resId);
   }
 
   @Override
