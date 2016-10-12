@@ -73,10 +73,10 @@ public class ResidenceMapFragment extends MapFragment implements OnMapReadyCallb
 
   /**
    * Invoked by framework once fragment created
-   * @param googleMap The map associated with this residence
+   * @param map The map associated with this residence
    */
   @Override
-  public void onMapReady(GoogleMap googleMap) {
+  public void onMapReady(GoogleMap map) {
     this.map = map;
 
     map.setOnMarkerDragListener(this);
