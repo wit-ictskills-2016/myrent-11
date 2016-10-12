@@ -10,6 +10,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -22,7 +23,7 @@ import org.wit.myrent.models.Residence;
 import static org.wit.android.helpers.IntentHelper.navigateUp;
 
 
-public class ResidenceMapFragment extends MapFragment implements OnMapReadyCallback,
+public class ResidenceMapFragment extends SupportMapFragment implements OnMapReadyCallback,
     GoogleMap.OnMarkerDragListener,
     GoogleMap.OnInfoWindowClickListener,
     GoogleMap.OnCameraIdleListener,
@@ -43,15 +44,21 @@ public class ResidenceMapFragment extends MapFragment implements OnMapReadyCallb
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
+    setHasOptionsMenu(true);
+
     resId = (Long)getActivity().getIntent().getSerializableExtra(ResidenceFragment.EXTRA_RESIDENCE_ID);
     app = (MyRentApp)getActivity().getApplication();
     residence = app.portfolio.getResidence(resId);
+
+
+
   }
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
     super.onCreateView(inflater, parent, savedInstanceState);
     View v = inflater.inflate(R.layout.activity_map, parent, false);
+    //getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
     getMapAsync(this);
     return v;
   }

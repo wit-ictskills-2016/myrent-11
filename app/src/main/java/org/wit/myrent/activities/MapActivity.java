@@ -1,16 +1,15 @@
 package org.wit.myrent.activities;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+
 import com.google.android.gms.maps.*;
 import org.wit.myrent.R;
 import org.wit.myrent.app.MyRentApp;
 import org.wit.myrent.models.Residence;
 
-public class MapActivity extends AppCompatActivity
+public class MapActivity extends FragmentActivity
 {
 
   /*
@@ -28,10 +27,12 @@ public class MapActivity extends AppCompatActivity
     super.onCreate(savedInstanceState);
     setContentView(R.layout.fragment_container);
 
+    //getActionBar().setDisplayHomeAsUpEnabled(true);
     //MapFragment mapFragment = (ResidenceMapFragment) getFragmentManager().findFragmentById(R.id.map);
 
-    FragmentManager manager = getFragmentManager();
-    Fragment fragment = manager.findFragmentById(R.id.fragmentContainer);
+    FragmentManager manager = getSupportFragmentManager();
+    SupportMapFragment fragment = (SupportMapFragment) getSupportFragmentManager()
+        .findFragmentById(R.id.fragmentContainer);
     if (fragment == null)
     {
       fragment = new ResidenceMapFragment();
