@@ -11,7 +11,8 @@ import com.google.android.gms.maps.model.Marker;
 public class ResidenceMapFragment extends MapFragment implements OnMapReadyCallback,
     GoogleMap.OnMarkerDragListener,
     GoogleMap.OnInfoWindowClickListener,
-    GoogleMap.OnCameraIdleListener
+    GoogleMap.OnCameraIdleListener,
+    GoogleMap.OnMarkerClickListener
 {
 
   // OnMapReadyCallback
@@ -48,6 +49,12 @@ public class ResidenceMapFragment extends MapFragment implements OnMapReadyCallb
   @Override
   public void onCameraIdle() {
 
+  }
+
+  // GoogleMap.OnMarkerClickListener
+  @Override
+  public boolean onMarkerClick(Marker marker) {
+    return false;
   }
 }
 
