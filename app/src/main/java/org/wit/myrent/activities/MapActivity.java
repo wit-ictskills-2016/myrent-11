@@ -2,6 +2,7 @@ package org.wit.myrent.activities;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import com.google.android.gms.maps.*;
@@ -36,6 +37,12 @@ public class MapActivity extends AppCompatActivity
       fragment = new ResidenceMapFragment();
       manager.beginTransaction().add(R.id.fragmentContainer, fragment).commit();
     }
+
+//    Fragment fragment =  ResidenceMapFragment.newInstance();
+//    FragmentTransaction fragmentTransaction =
+//        getFragmentManager().beginTransaction();
+//    fragmentTransaction.add(R.id.fragmentContainer, fragment);
+//    fragmentTransaction.commit();
   }
 
 }
