@@ -2,6 +2,7 @@ package org.wit.myrent.activities;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -13,6 +14,8 @@ import com.google.android.gms.maps.model.Marker;
 import org.wit.myrent.R;
 import org.wit.myrent.app.MyRentApp;
 import org.wit.myrent.models.Residence;
+
+import static org.wit.android.helpers.IntentHelper.navigateUp;
 
 
 public class ResidenceMapFragment extends MapFragment implements OnMapReadyCallback,
@@ -49,6 +52,19 @@ public class ResidenceMapFragment extends MapFragment implements OnMapReadyCallb
     return v;
   }
 
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item)
+  {
+    switch (item.getItemId())
+    {
+      case android.R.id.home:
+        navigateUp(getActivity(), ResidenceFragment.EXTRA_RESIDENCE_ID, resId);
+        return true;
+
+      default: return super.onOptionsItemSelected(item);
+    }
+  }
+  
   // OnMapReadyCallback
   @Override
   public void onMapReady(GoogleMap googleMap) {
