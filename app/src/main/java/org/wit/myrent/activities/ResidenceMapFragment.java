@@ -52,7 +52,7 @@ public class ResidenceMapFragment extends MapFragment implements OnMapReadyCallb
   public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
     super.onCreateView(inflater, parent, savedInstanceState);
     View v = inflater.inflate(R.layout.activity_map, parent, false);
-
+    getMapAsync(this);
     return v;
   }
 
