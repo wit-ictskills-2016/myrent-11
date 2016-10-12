@@ -9,7 +9,8 @@ import com.google.android.gms.maps.model.Marker;
  * Created by jfitzgerald on 12/10/2016.
  */
 public class ResidenceMapFragment extends MapFragment implements OnMapReadyCallback,
-    GoogleMap.OnMarkerDragListener
+    GoogleMap.OnMarkerDragListener,
+    GoogleMap.OnInfoWindowClickListener
 {
 
   // OnMapReadyCallback
@@ -33,6 +34,12 @@ public class ResidenceMapFragment extends MapFragment implements OnMapReadyCallb
   // GoogleMap.OnMarkerDragListener
   @Override
   public void onMarkerDragEnd(Marker marker) {
+
+  }
+
+  // GoogleMap.OnInfoWindowClickListener
+  @Override
+  public void onInfoWindowClick(Marker marker) {
 
   }
 }
