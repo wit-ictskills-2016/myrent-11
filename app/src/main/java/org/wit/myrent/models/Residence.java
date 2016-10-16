@@ -2,7 +2,7 @@ package org.wit.myrent.models;
 
 import android.content.Context;
 
-import org.wit.myrent.R;
+import com.example.android.multidex.MyRentApp.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;

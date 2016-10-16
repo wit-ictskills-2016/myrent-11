@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="org.wit.myrent"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.android.multidex.MyRentApp">
 
   <uses-permission android:name="android.permission.READ_CONTACTS" />
 
   <application
-      android:name=".app.MyRentApp"
+      android:name="android.support.multidex.MultiDexApplication"
       android:allowBackup="true"
       android:icon="@mipmap/ic_launcher"
       android:label="@string/app_name"
@@ -13,7 +13,7 @@
       android:theme="@style/AppTheme">
 
     <activity
-        android:name=".activities.ResidenceListActivity"
+        android:name="org.wit.myrent.activities.ResidenceListActivity"
         android:label="@string/app_name" >
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -22,27 +22,27 @@
     </activity>
 
     <activity
-        android:name=".activities.ResidencePagerActivity"
+        android:name="org.wit.myrent.activities.ResidencePagerActivity"
         android:windowSoftInputMode="stateHidden|adjustResize"
         android:label="@string/app_name" >
       <meta-data android:name="android.support.PARENT_ACTIVITY"
-                 android:value=".activities.ResidenceListActivity"/>
+                 android:value="org.wit.myrent.activities.ResidenceListActivity"/>
     </activity>
 
     <activity
-        android:name=".settings.SettingsActivity"
+        android:name="org.wit.myrent.settings.SettingsActivity"
         android:label="@string/action_settings" >
       <meta-data
           android:name="android.support.PARENT_ACTIVITY"
-          android:value=".activities.ResidenceListActivity"/>
+          android:value="org.wit.myrent.activities.ResidenceListActivity"/>
     </activity>
 
     <activity
-        android:name=".activities.MapActivity"
+        android:name="org.wit.myrent.activities.MapActivity"
         android:windowSoftInputMode="stateHidden|adjustResize"
         android:label="@string/app_name">
       <meta-data android:name="android.support.PARENT_ACTIVITY"
-                 android:value=".activities.ResidencePagerActivity"/>
+                 android:value="org.wit.myrent.activities.ResidencePagerActivity"/>
     </activity>
 
     <!--Google MAP API key placeholder (keys in build.gradle)-->

@@ -1,6 +1,6 @@
 package org.wit.myrent.activities;
 
-import org.wit.myrent.R;
+import com.example.android.multidex.MyRentApp.R;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

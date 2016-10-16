@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
-import org.wit.myrent.R;
+import com.example.android.multidex.MyRentApp.R;
 import org.wit.myrent.app.MyRentApp;
 import org.wit.myrent.models.Portfolio;
 import org.wit.myrent.models.Residence;

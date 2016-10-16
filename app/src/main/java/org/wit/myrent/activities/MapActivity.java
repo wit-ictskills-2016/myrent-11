@@ -4,10 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.android.multidex.MyRentApp.R;
 import com.google.android.gms.maps.*;
 import com.google.android.gms.maps.model.*;
-
-import org.wit.myrent.R;
 
 import static org.wit.android.helpers.IntentHelper.navigateUp;
 

@@ -16,10 +16,12 @@ android {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
       manifestPlaceholders = [google_map_key: "AIzaSyBEFgNwxy9p--adLnfXX0-nXtSQ7TbRD4g"]
+      multiDexEnabled true
     }
     debug {
       manifestPlaceholders = [google_map_key: "AIzaSyBEFgNwxy9p--adLnfXX0-nXtSQ7TbRD4g"]
       debuggable true
+      multiDexEnabled true
     }
   }
 
@@ -29,6 +31,7 @@ android {
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
     compile 'com.google.android.gms:play-services:9.4.0'
+    compile 'com.android.support:multidex:1.0.1'
 
   }
 }

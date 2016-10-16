@@ -6,7 +6,7 @@ import java.util.GregorianCalendar;
 
 import org.wit.android.helpers.ContactHelper;
 import org.wit.android.helpers.IntentHelper;
-import org.wit.myrent.R;
+import com.example.android.multidex.MyRentApp.R;
 import org.wit.myrent.app.MyRentApp;
 import org.wit.myrent.models.Portfolio;
 import org.wit.myrent.models.Residence;

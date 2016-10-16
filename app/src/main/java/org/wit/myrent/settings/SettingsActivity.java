@@ -3,7 +3,7 @@ package org.wit.myrent.settings;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
-import org.wit.myrent.R;
+import com.example.android.multidex.MyRentApp.R;
 import org.wit.myrent.settings.SettingsFragment;
 
 
